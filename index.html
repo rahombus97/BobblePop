@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+            <meta charset="utf8">
+            <title>Bubble Pop</title> 
+            <link rel="stylesheet" type="text/css" href="css/custom.css"></link>
+            <script src="js/jquery-3.1.1.js"></script>
+            <script src="js/modernizr.js"></script>
+        <script>
+        Modernizr.load([{
+            load: "//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js",
+            complete: function (){
+                if (!window.jQuery){
+                    Modernizr.load("js/jquery-3.1.1.js");
+                }
+            },
+          },
+         "js/ui.js",               
+         { 
+           load: "js/game.js",
+           complete: function(){
+             $(function(){
+                var game = new BubbleShoot.Game();
+                game.init();
+            })
+         } 
+        }]);  
+        </script>
+    </head>
+    <body>
+        <div id="page">
+            <div id="top_bar"></div>
+            <div id="game"></div>
+            <div id="footer_bar"></div>
+                <div id="start_game" class="dialog">
+                    <div id="start_game_message">
+                    <h2>Start a new game</h2>
+                    </div>
+                <div class="but_start_game button">
+                    New Game
+                </div>    
+            </div>
+        </div>
+
+        
+    </body>
+</html>
