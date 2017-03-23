@@ -4,6 +4,7 @@
             <meta charset="utf8">
             <title>Bubble Pop</title> 
             <link rel="stylesheet" type="text/css" href="css/custom.css"></link>
+            <link rel="stylesheet" type="text/css" href="css/game.css"></link>
             <script src="js/jquery-3.1.1.js"></script>
             <script src="js/modernizr.js"></script>
         <script>
@@ -15,7 +16,8 @@
                 }
             },
           },
-         "js/ui.js",               
+         "js/ui.js",
+         "js/bubble.js",                          
          { 
            load: "js/game.js",
            complete: function(){
@@ -30,7 +32,9 @@
     <body>
         <div id="page">
             <div id="top_bar"></div>
-            <div id="game"></div>
+            <div id="game">
+                <div id="board"></div>
+            </div>
             <div id="footer_bar"></div>
                 <div id="start_game" class="dialog">
                     <div id="start_game_message">
